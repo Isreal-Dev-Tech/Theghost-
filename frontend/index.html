@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 TikTok Country Race - Live Gift Battle</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="streamer-info">
+            <div class="live-badge">🔴 LIVE</div>
+            <div class="streamer-name" id="streamerName">@username</div>
+        </div>
+        <div class="game-title">🏆 COUNTRY GIFT RACE</div>
+        <div class="viewer-count">
+            <span id="viewerCount">0</span> 👥
+        </div>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="leaderboard" id="leaderboard">
+        <div class="leaderboard-title">🏅 TOP COUNTRIES</div>
+        <div class="leaderboard-slots" id="leaderboardSlots">
+            <div class="leaderboard-slot empty">
+                <span class="medal">🥇</span>
+                <span class="flag">🏳️</span>
+                <span class="name">---</span>
+                <span class="score">0</span>
+            </div>
+            <div class="leaderboard-slot empty">
+                <span class="medal">🥈</span>
+                <span class="flag">🏳️</span>
+                <span class="name">---</span>
+                <span class="score">0</span>
+            </div>
+            <div class="leaderboard-slot empty">
+                <span class="medal">🥉</span>
+                <span class="flag">🏳️</span>
+                <span class="name">---</span>
+                <span class="score">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div class="game-container" id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Finish Line -->
+        <div class="finish-line" id="finishLine"></div>
+
+        <!-- Country Labels -->
+        <div class="country-labels" id="countryLabels"></div>
+    </div>
+
+    <!-- Gift Notifications -->
+    <div class="gift-notifications" id="giftNotifications"></div>
+
+    <!-- Recent Gifts Panel -->
+    <div class="recent-gifts-panel" id="recentGiftsPanel">
+        <div class="panel-header">
+            <span>🎁 Recent Gifts</span>
+            <button class="toggle-btn" onclick="togglePanel()">−</button>
+        </div>
+        <div class="gifts-list" id="giftsList"></div>
+    </div>
+
+    <!-- Chat/Comments -->
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-messages" id="chatMessages"></div>
+    </div>
+
+    <!-- Control Panel -->
+    <div class="control-panel" id="controlPanel">
+        <div class="control-header">
+            <span>🎮 Controls</span>
+            <button class="toggle-btn" onclick="toggleControls()">⚙️</button>
+        </div>
+        <div class="control-body" id="controlBody">
+            <div class="control-group">
+                <label>Test Gift:</label>
+                <select id="testCountry">
+                    <option value="">Random Country</option>
+                </select>
+                <select id="testGift">
+                    <option value="Rose">🌹 Rose (1 coin)</option>
+                    <option value="TikTok">🎵 TikTok (5 coins)</option>
+                    <option value="GG">🎮 GG (10 coins)</option>
+                    <option value="Love">❤️ Love (50 coins)</option>
+                    <option value="Love You">💖 Love You (100 coins)</option>
+                    <option value="Crown">👑 Crown (500 coins)</option>
+                    <option value="Galaxy">🌌 Galaxy (1000 coins)</option>
+                </select>
+                <input type="number" id="testCount" value="1" min="1" max="99">
+                <button onclick="sendTestGift()">Send Test Gift</button>
+            </div>
+            <div class="control-group">
+                <button class="btn-start" onclick="startGame()">▶️ Start Race</button>
+                <button class="btn-reset" onclick="resetGame()">🔄 Reset Race</button>
+            </div>
+            <div class="control-group">
+                <label>Character Type:</label>
+                <select id="characterType" onchange="changeCharacterType()">
+                    <option value="horse">🐴 Horse</option>
+                    <option value="soccer">⚽ Soccer Player</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Background:</label>
+                <select id="backgroundTheme" onchange="changeBackground()">
+                    <option value="mountain">🏔️ Mountain</option>
+                    <option value="stadium">🏟️ Stadium</option>
+                    <option value="desert">🏜️ Desert</option>
+                </select>
+            </div>
+            <div class="status" id="connectionStatus">
+                <span class="status-dot offline"></span>
+                <span>Disconnected</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Winner Modal -->
+    <div class="winner-modal" id="winnerModal">
+        <div class="winner-content">
+            <div class="winner-trophy">🏆</div>
+            <div class="winner-text">WINNER!</div>
+            <div class="winner-country" id="winnerCountry">🎉</div>
+            <div class="winner-name" id="winnerName">---</div>
+            <button onclick="closeWinnerModal()">Continue</button>
+        </div>
+    </div>
+
+    <!-- Instructions Overlay -->
+    <div class="instructions" id="instructions">
+        <div class="instructions-content">
+            <h2>🎮 How to Play</h2>
+            <p>1. Go LIVE on TikTok</p>
+            <p>2. Share this screen in your stream</p>
+            <p>3. Viewers send gifts to move their country!</p>
+            <p>4. First country to the finish line WINS! 🏆</p>
+            <button onclick="hideInstructions()">Got it! Let's Race! 🚀</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
