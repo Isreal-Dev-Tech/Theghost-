@@ -1,0 +1,278 @@
+{
+  "streamer": {
+    "tiktok_username": "YOUR_TIKTOK_USERNAME",
+    "stream_title": "Country Gift Race! Send gifts to move your country!"
+  },
+  "game_settings": {
+    "race_distance": 2000,
+    "pixels_per_coin": 2,
+    "animation_speed": "normal",
+    "character_type": "horse",
+    "background_theme": "mountain",
+    "show_trails": true,
+    "finish_line_confetti": true,
+    "leaderboard_update_interval": 1,
+    "max_countries_display": 15,
+    "gift_cooldown_seconds": 0.5,
+    "auto_scroll_camera": true
+  },
+  "character_presets": {
+    "horse": {
+      "sprite_width": 60,
+      "sprite_height": 40,
+      "animation_frames": 4,
+      "run_speed": "fast",
+      "particle_type": "dust"
+    },
+    "soccer": {
+      "sprite_width": 40,
+      "sprite_height": 50,
+      "animation_frames": 6,
+      "run_speed": "normal",
+      "particle_type": "grass",
+      "show_ball": true
+    }
+  },
+  "backgrounds": {
+    "mountain": {
+      "color": "#1a1a2e",
+      "ground_color": "#c4a35a",
+      "track_color": "#8B7355",
+      "track_lines": "#6b5a3e",
+      "mountain_colors": ["#2d3561", "#3d4a7a", "#5a6fa8"],
+      "sky_gradient": ["#0f0f23", "#1a1a3e", "#2d2d5a"]
+    },
+    "stadium": {
+      "color": "#0a4d2e",
+      "ground_color": "#2d8a4e",
+      "track_color": "#1a5c3a",
+      "track_lines": "#ffffff",
+      "crowd_colors": ["#1a1a2e", "#16213e", "#0f3460"],
+      "sky_gradient": ["#1a1a2e", "#16213e"]
+    },
+    "desert": {
+      "color": "#8B6914",
+      "ground_color": "#D4A574",
+      "track_color": "#C4956A",
+      "track_lines": "#A67B5B",
+      "dune_colors": ["#C4956A", "#B8860B", "#D2691E"],
+      "sky_gradient": ["#87CEEB", "#E0F6FF"]
+    }
+  },
+  "gift_values": {
+    "Rose": { "coins": 1, "emoji": "🌹", "color": "#ff1744" },
+    "TikTok": { "coins": 5, "emoji": "🎵", "color": "#00f2ea" },
+    "GG": { "coins": 10, "emoji": "🎮", "color": "#9146ff" },
+    "Love": { "coins": 50, "emoji": "❤️", "color": "#ff0050" },
+    "Love You": { "coins": 100, "emoji": "💖", "color": "#ff0050" },
+    "Sun Cream": { "coins": 50, "emoji": "☀️", "color": "#ffd700" },
+    "Mirror": { "coins": 100, "emoji": "🪞", "color": "#c0c0c0" },
+    "Hat": { "coins": 150, "emoji": "🎩", "color": "#4a148c" },
+    "Crown": { "coins": 500, "emoji": "👑", "color": "#ffd700" },
+    "Galaxy": { "coins": 1000, "emoji": "🌌", "color": "#7c4dff" },
+    "Interstellar": { "coins": 2000, "emoji": "🚀", "color": "#00b0ff" },
+    "TikTok Universe": { "coins": 5000, "emoji": "🌌", "color": "#ff0050" }
+  },
+  "countries": [
+    {
+      "id": "south_africa",
+      "name": "South Africa",
+      "flag_emoji": "🇿🇦",
+      "flag_code": "ZA",
+      "character_color": "#00A859",
+      "lane_color": "rgba(0, 168, 89, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria",
+      "flag_emoji": "🇳🇬",
+      "flag_code": "NG",
+      "character_color": "#008751",
+      "lane_color": "rgba(0, 135, 81, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "flag_emoji": "🇧🇷",
+      "flag_code": "BR",
+      "character_color": "#009739",
+      "lane_color": "rgba(0, 151, 57, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "usa",
+      "name": "USA",
+      "flag_emoji": "🇺🇸",
+      "flag_code": "US",
+      "character_color": "#B22234",
+      "lane_color": "rgba(178, 34, 52, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "jamaica",
+      "name": "Jamaica",
+      "flag_emoji": "🇯🇲",
+      "flag_code": "JM",
+      "character_color": "#009B3A",
+      "lane_color": "rgba(0, 155, 58, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "flag_emoji": "🇬🇭",
+      "flag_code": "GH",
+      "character_color": "#006B3F",
+      "lane_color": "rgba(0, 107, 63, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "kenya",
+      "name": "Kenya",
+      "flag_emoji": "🇰🇪",
+      "flag_code": "KE",
+      "character_color": "#BB0000",
+      "lane_color": "rgba(187, 0, 0, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "flag_emoji": "🇨🇦",
+      "flag_code": "CA",
+      "character_color": "#FF0000",
+      "lane_color": "rgba(255, 0, 0, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom",
+      "flag_emoji": "🇬🇧",
+      "flag_code": "GB",
+      "character_color": "#012169",
+      "lane_color": "rgba(1, 33, 105, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "flag_emoji": "🇦🇺",
+      "flag_code": "AU",
+      "character_color": "#00008B",
+      "lane_color": "rgba(0, 0, 139, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "flag_emoji": "🇮🇳",
+      "flag_code": "IN",
+      "character_color": "#FF9932",
+      "lane_color": "rgba(255, 153, 50, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "flag_emoji": "🇲🇽",
+      "flag_code": "MX",
+      "character_color": "#006847",
+      "lane_color": "rgba(0, 104, 71, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "flag_emoji": "🇫🇷",
+      "flag_code": "FR",
+      "character_color": "#0055A4",
+      "lane_color": "rgba(0, 85, 164, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "flag_emoji": "🇩🇪",
+      "flag_code": "DE",
+      "character_color": "#000000",
+      "lane_color": "rgba(0, 0, 0, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "flag_emoji": "🇪🇬",
+      "flag_code": "EG",
+      "character_color": "#CE1126",
+      "lane_color": "rgba(206, 17, 38, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "uae",
+      "name": "UAE",
+      "flag_emoji": "🇦🇪",
+      "flag_code": "AE",
+      "character_color": "#00732F",
+      "lane_color": "rgba(0, 115, 47, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "kuwait",
+      "name": "Kuwait",
+      "flag_emoji": "🇰🇼",
+      "flag_code": "KW",
+      "character_color": "#007A3D",
+      "lane_color": "rgba(0, 122, 61, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "saudi_arabia",
+      "name": "Saudi Arabia",
+      "flag_emoji": "🇸🇦",
+      "flag_code": "SA",
+      "character_color": "#006C35",
+      "lane_color": "rgba(0, 108, 53, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "flag_emoji": "🇶🇦",
+      "flag_code": "QA",
+      "character_color": "#8D1B3D",
+      "lane_color": "rgba(141, 27, 61, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    },
+    {
+      "id": "algeria",
+      "name": "Algeria",
+      "flag_emoji": "🇩🇿",
+      "flag_code": "DZ",
+      "character_color": "#006233",
+      "lane_color": "rgba(0, 98, 51, 0.1)",
+      "enabled": true,
+      "gift_multiplier": 1.0
+    }
+  ]
+}
